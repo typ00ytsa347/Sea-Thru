@@ -1,7 +1,7 @@
 path: ./data
-train: images
-val: images
-test:
+train: images/train
+val: images/val
+test: images/test
 
 
 # Classes
