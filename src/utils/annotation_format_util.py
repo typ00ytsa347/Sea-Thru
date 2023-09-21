@@ -2,7 +2,7 @@ import os
 import xml.etree.ElementTree as ET
 
 def main():
-    src_path = "/home/anyone/Documents/Sea-Thru/data/labels/train"
+    src_path = "/home/anyone/Documents/Sea-Thru/data/labels/val"
     dest_path = "/home/anyone/Desktop/test"
 
     for filename in os.listdir(src_path):
@@ -22,14 +22,9 @@ def parse_xml(xml_path, write_path):
     root = tree.getroot()
   
     for child in root:
-        # category = ""
-        # img_width, img_height = 0, 0
-        # xmin, ymin, xmax, ymax = 0, 0, 0, 0
 
         if child.tag == "size":
-            print(child[0].text)
             img_width = int(child[0].text)
-            print(img_width)
             img_height = int(child[1].text)
         if child.tag == "object":
             for grandchild in child:
@@ -42,7 +37,7 @@ def parse_xml(xml_path, write_path):
                     ymax = int(grandchild[3].text)
             xcentre, ycentre, width, height = calc_xywh(img_width, img_height, xmin, ymin, xmax, ymax)
 
-            x, y, w, h = str(xcentre), str(ycentre), str(width), str(height)
+            x, y, w, h = str(round(xcentre, 6)), str(round(ycentre, 6)), str(round(width, 6)), str(round(height, 6))
 
             line = " ".join((category, x, y, w, h)) + "\n"
 
@@ -52,7 +47,6 @@ def parse_xml(xml_path, write_path):
 
 def calc_xywh(img_width, img_height, xmin, ymin, xmax, ymax):
     x = (xmin + xmax) / 2.0
-    print(img_width)
     xnorm = x / img_width
 
     y = (ymin + ymax) / 2.0
