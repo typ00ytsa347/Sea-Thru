@@ -3,11 +3,11 @@ import xml.etree.ElementTree as ET
 
 def main():
     src_path = "/home/anyone/Documents/Sea-Thru/data/labels/train"
-    dest_path = "/home/anyone/Desktop"
+    dest_path = "/home/anyone/Desktop/test"
 
     for filename in os.listdir(src_path):
         src_annotation_path = os.path.join(src_path, filename)
-        dest_annotation_path = os.path.join(dest_path, filename)
+        dest_annotation_path = os.path.join(dest_path, filename).replace("xml", "txt")
 
         parse_xml(src_annotation_path, dest_annotation_path)
 
@@ -22,12 +22,14 @@ def parse_xml(xml_path, write_path):
     root = tree.getroot()
   
     for child in root:
-        category
-        img_width, img_height
-        xmin, ymin, xmax, ymax
+        # category = ""
+        # img_width, img_height = 0, 0
+        # xmin, ymin, xmax, ymax = 0, 0, 0, 0
 
         if child.tag == "size":
+            print(child[0].text)
             img_width = int(child[0].text)
+            print(img_width)
             img_height = int(child[1].text)
         if child.tag == "object":
             for grandchild in child:
@@ -38,11 +40,11 @@ def parse_xml(xml_path, write_path):
                     ymin = int(grandchild[1].text)
                     xmax = int(grandchild[2].text)
                     ymax = int(grandchild[3].text)
-            xcentre, ycentre, width, height = calc_xywh()
+            xcentre, ycentre, width, height = calc_xywh(img_width, img_height, xmin, ymin, xmax, ymax)
 
             x, y, w, h = str(xcentre), str(ycentre), str(width), str(height)
 
-            line = " ".join(category, x, y, w, h) + "\n"
+            line = " ".join((category, x, y, w, h)) + "\n"
 
             dest_file.write(line)
     dest_file.close()
@@ -50,6 +52,7 @@ def parse_xml(xml_path, write_path):
 
 def calc_xywh(img_width, img_height, xmin, ymin, xmax, ymax):
     x = (xmin + xmax) / 2.0
+    print(img_width)
     xnorm = x / img_width
 
     y = (ymin + ymax) / 2.0
