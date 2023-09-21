@@ -1,7 +1,4 @@
 from ultralytics import YOLO
 
-model = YOLO('yolov8n.pt')
-model.predict(
-   source='https://media.roboflow.com/notebooks/examples/dog.jpeg',
-   conf=0.25
-)
+model = YOLO('yolov8n.yaml')
+results = model.train(data='data.yaml', epochs=10)
