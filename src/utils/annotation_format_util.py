@@ -2,14 +2,15 @@ import os
 import xml.etree.ElementTree as ET
 
 def main():
-    src_path = ""
-    dest_path = ""
+    src_path = "/home/anyone/Documents/Sea-Thru/data/labels/train"
+    dest_path = "/home/anyone/Desktop"
 
     for filename in os.listdir(src_path):
         src_annotation_path = os.path.join(src_path, filename)
         dest_annotation_path = os.path.join(dest_path, filename)
 
         parse_xml(src_annotation_path, dest_annotation_path)
+
 
 def parse_xml(xml_path, write_path):
     dest_file = open(write_path, "w")
@@ -37,14 +38,14 @@ def parse_xml(xml_path, write_path):
                     ymin = int(grandchild[1].text)
                     xmax = int(grandchild[2].text)
                     ymax = int(grandchild[3].text)
+            xcentre, ycentre, width, height = calc_xywh()
 
-    xcentre, ycentre, width, height = calc_xywh()
+            x, y, w, h = str(xcentre), str(ycentre), str(width), str(height)
 
-    x, y, w, h = str(xcentre), str(ycentre), str(width), str(height)
+            line = " ".join(category, x, y, w, h) + "\n"
 
-    line = " ".join(category, x, y, w, h) + "\n"
-
-    dest_file.write(line)
+            dest_file.write(line)
+    dest_file.close()
 
 
 def calc_xywh(img_width, img_height, xmin, ymin, xmax, ymax):
