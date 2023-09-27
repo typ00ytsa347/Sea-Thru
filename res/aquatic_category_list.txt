@@ -1,0 +1,83 @@
+0: tench, Tinca tinca
+1: goldfish, Carassius auratus
+2: great white shark, white shark, man-eater, man-eating shark, Carcharodon carcharias
+3: tiger shark, Galeocerdo cuvieri
+4: hammerhead, hammerhead shark
+5: electric ray, crampfish, numbfish, torpedo
+6: stingray
+20: water ouzel, dipper
+33: loggerhead, loggerhead turtle, Caretta caretta
+34: leatherback turtle, leatherback, leathery turtle, Dermochelys coriacea
+35: mud turtle
+36: terrapin
+37: box turtle, box tortoise
+49: African crocodile, Nile crocodile, Crocodylus niloticus
+50: American alligator, Alligator mississipiensis
+58: water snake
+65: sea snake
+107: jellyfish
+108: sea anemone, anemone
+109: brain coral
+112: conch
+115: sea slug, nudibranch
+116: chiton, coat-of-mail shell, sea cradle, polyplacophore
+117: chambered nautilus, pearly nautilus, nautilus
+118: Dungeness crab, Cancer magister
+119: rock crab, Cancer irroratus
+120: fiddler crab
+121: king crab, Alaska crab, Alaskan king crab, Alaska king crab, Paralithodesamtschatica
+122: American lobster, Northern lobster, Maine lobster, Homarus americanus
+123: spiny lobster, langouste, rock lobster, crawfish, crayfish, sea crawfish
+144: pelican
+145: king penguin, Aptenodytes patagonica
+146: albatross, mollymawk
+147: grey whale, gray whale, devilfish, Eschrichtius gibbosus, Eschrichtius robustus
+148: killer whale, killer, orca, grampus, sea wolf, Orcinus orca
+149: dugong, Dugong dugon
+150: sea lion
+327: starfish, sea star
+328: sea urchin
+329: sea cucumber, holothurian
+344: hippopotamus, hippo, river horse, Hippopotamus amphibius
+360: otter
+389: barracouta, snoek
+390: eel
+391: coho, cohoe, coho salmon, blue jack, silver salmon, Oncorhynchus kisutch
+392: rock beauty, Holocanthus tricolor
+393: anemone fish
+394: sturgeon
+395: gar, garfish, garpike, billfish, Lepisosteus osseus
+396: lionfish
+397: puffer, pufferfish, blowfish, globefish
+403: aircraft carrier, carrier, flattop, attack aircraft carrier
+408: amphibian, amphibious vehicle
+437: beacon, lighthouse, beacon light, pharos
+449: boathouse
+460: breakwater, groin, groyne, mole, bulwark, seawall, jetty
+472: canoe
+484: catamaran
+510: container ship, containership, container vessel
+536: dock, dockage, docking facility
+540: drilling platform, offshore rig
+554: fireboat
+576: gondola
+536: dock, dockage, docking facility
+625: lifeboat
+628: liner, ocean liner
+693: paddle, boat paddle
+694: paddlewheel, paddle wheel
+718: pier
+756: rain barrel
+758: reel
+780: schooner
+801: snorkel
+814: speedboat
+833: submarine, pigboat, sub, U-boat
+871: trimaran
+898: water bottle
+913: wreck
+914: yawl
+973: coral reef
+975: lakeside, lakeshore
+978: seashore, coast, seacoast, sea-coast
+983: scuba diver
