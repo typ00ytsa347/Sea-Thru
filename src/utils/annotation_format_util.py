@@ -2,8 +2,8 @@ import os
 import xml.etree.ElementTree as ET
 
 def main():
-    src_path = "/home/anyone/Documents/Sea-Thru/data/labels/val"
-    dest_path = "/home/anyone/Desktop/test"
+    src_path = "/home/anyone/Desktop/data_failsafe/labels_unfoldered_filtered"
+    dest_path = "/home/anyone/Desktop/data_failsafe/labels_unfoldered_filtered_txt"
 
     for filename in os.listdir(src_path):
         src_annotation_path = os.path.join(src_path, filename)
