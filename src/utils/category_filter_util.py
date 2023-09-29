@@ -1,15 +1,15 @@
 import os
 import shutil, errno
 
-src_path = '/home/anyone/Documents/Sea-Thru/data/images/val'
+src_path = '/home/anyone/Desktop/data_failsafe/images_unfoldered_filtered'
 dest_path = '/home/anyone/Desktop/data_failsafe/val_images_filtered'
 
-label_src_path = '/home/anyone/Documents/Sea-Thru/data/labels/val'
-label_dest_path = '/home/anyone/Desktop/data_failsafe/val_labels_filtered'
+label_src_path = '/home/anyone/Desktop/data_failsafe/val_labels_txt'
+label_dest_path = '/home/anyone/Desktop/data_failsafe/val_labels_filtered_txt'
 
 category_dict = dict()
 name_list = list()
-with open('./res/category_list.txt') as category_list:
+with open('./res/test.txt') as category_list:
     lines = category_list.readlines()
     count = 0
     for line in lines:

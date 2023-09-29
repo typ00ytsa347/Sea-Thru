@@ -1,10 +1,10 @@
 import os
 
-src_dir = '/home/anyone/Documents/Sea-Thru/data/train/labels'
+src_dir = '/home/anyone/Documents/Sea-Thru/data/val/labels'
 
 category_dict = dict()
 name_list = list()
-with open('./res/category_list.txt') as category_list:
+with open('./res/test.txt') as category_list:
     lines = category_list.readlines()
     count = 0
     for line in lines:
